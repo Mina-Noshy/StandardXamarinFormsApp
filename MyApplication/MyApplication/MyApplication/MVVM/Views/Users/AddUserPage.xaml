@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication.MVVM.Views.Users.AddUserPage"
+             Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Command="{Binding CancelCommand}"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Padding="10" Spacing="5">
+        <Label Text="user name"/>
+        <Entry Text="{Binding UserName}"/>
+        <Label Text="password"/>
+        <Entry Text="{Binding Password}"/>
+
+        <Button Text="Save" Command="{Binding SaveCommand}" IsEnabled="{Binding CanSave}"/>
+        <Button Text="Cancel" Command="{Binding CancelCommand}"/>
+
+        <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+    </StackLayout>
+</ContentPage>

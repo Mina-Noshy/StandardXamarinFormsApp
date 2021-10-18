@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication.Resources.Values.MyValues">
+
+    <!--xmlns:converter="clr-namespace:GreenApp.Converters"-->
+
+    <!-- 
+    converters
+    =======================================-->
+    <!--<converter:ImgToCatPathConverter x:Key="imgToCatPathConverter"/>-->
+    <!-- end converters -->
+
+    <!-- 
+    colors
+    =======================================-->
+
+    <Color x:Key="primary">#e7305e</Color>
+
+    <Color x:Key="background-light">#f8f9fa</Color>
+    <Color x:Key="background-dark">#343a40</Color>
+    
+    <Color x:Key="text-light">#f8f9fa</Color>
+    <Color x:Key="text-dark">#343a40</Color>
+
+    <Color x:Key="success">#28a745</Color>
+    <Color x:Key="info">#17a2b8</Color>
+    <Color x:Key="warning">#ffc107</Color>
+    <Color x:Key="danger">#dc3545</Color>
+    <Color x:Key="light">#f8f9fa</Color>
+    <Color x:Key="dark">#343a40</Color>
+
+
+    <Color x:Key="red">#dc3545</Color>
+    <Color x:Key="orange">#fd7e14</Color>
+    <Color x:Key="yellow">#ffc107</Color>
+    <Color x:Key="green">#28a745</Color>
+    <Color x:Key="blue">#007bff</Color>
+    <Color x:Key="white">#ffffff</Color>
+    <Color x:Key="gray">#6c757d</Color>
+    <Color x:Key="gray-dark">#343a40</Color>
+    <Color x:Key="indigo">#6610f2</Color>
+    <Color x:Key="purple">#6f42c1</Color>
+    <Color x:Key="pink">#e83e8c</Color>
+    <Color x:Key="teal">#20c997</Color>
+    <Color x:Key="cyan">#17a2b8</Color>
+    <!-- end colors -->
+
+
+    <!-- 
+    double 
+    =======================================-->
+    <x:Double x:Key="sm-font">10</x:Double>
+    <x:Double x:Key="md-font">12</x:Double>
+    <x:Double x:Key="lg-font">14</x:Double>
+
+    <!-- end double -->
+
+
+    <!-- 
+    styles 
+    =======================================-->
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="FONT-AR-BOLD"/>
+    </Style>
+    <Style TargetType="Entry">
+        <Setter Property="FontFamily" Value="FONT-AR-BOLD"/>
+    </Style>
+    <Style TargetType="Picker">
+        <Setter Property="FontFamily" Value="FONT-AR-BOLD"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="FONT-AR-BOLD"/>
+    </Style>
+    <!-- end styles -->
+
+
+
+
+    <!-- 
+    themes (dark/light) 
+    =======================================-->
+
+    <!-- end themes -->
+
+</ResourceDictionary>
