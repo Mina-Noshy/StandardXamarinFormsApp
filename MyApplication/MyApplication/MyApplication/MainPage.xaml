@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication.MainPage"
+             xmlns:fontAwesome="clr-namespace:FontAwesome"
+             FlowDirection="{x:Static Device.FlowDirection}"
+             xmlns:resx="clr-namespace:MyApplication.Resources.Translate;assembly=MyApplication">
+
+    <StackLayout Padding="30">
+
+        <StackLayout>
+            <Entry Placeholder="username"/>
+            <Entry Placeholder="password" IsPassword="True"/>
+        </StackLayout>
+
+        <Button Text="Login" Clicked="Button_Clicked"/>
+
+        <Button Text="{x:Static fontAwesome:FontAwesomeIcons.Microsoft}" FontFamily="FA-B" Clicked="Button_Clicked_1"/>
+
+    </StackLayout>
+
+</ContentPage>

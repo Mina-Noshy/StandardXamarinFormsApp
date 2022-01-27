@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="MyApplication.AppShell"
+        xmlns:views="clr-namespace:MyApplication.MVVM.Views.Users"
+        FlyoutBackgroundImage="shell_bg"
+        FlyoutBackgroundImageAspect="AspectFill"
+        FlyoutBackgroundColor="Black"
+        Title="Eastaria">
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <StackLayout BackgroundColor="Transparent"
+                         HeightRequest="100"
+                         Orientation="Horizontal">
+
+                    <Image Aspect="AspectFill"
+                       Source="icon"
+                       HeightRequest="80"
+                       WidthRequest="80"/>
+
+                    <Label Text="Eastaria"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+
+                    <Label Text="eastaria.com"
+                       Margin="5"
+                       TextColor="Black"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalTextAlignment="End" />
+                </StackLayout>
+                <StackLayout>
+                    <BoxView HeightRequest="0.5" 
+                             HorizontalOptions="FillAndExpand"
+                             BackgroundColor="Gray"
+                             VerticalOptions="End"/>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+
+
+    <FlyoutItem Title="About" Icon="icon">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AddUserPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Browse" Icon="icon">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate views:AddUserPage}" />
+    </FlyoutItem>
+
+    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
+    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" >
+    </MenuItem>
+
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:AddUserPage}" />
+    </TabBar>
+
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="White"
+                         Opacity="0.6"
+                         Orientation="Horizontal">
+
+                <Image Aspect="AspectFill"
+                       Source="icon" BackgroundColor="Black"
+                       HeightRequest="60"
+                       WidthRequest="60"/>
+                
+                <Label Text="all rights reserved eastaria.com"
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+
+</Shell>

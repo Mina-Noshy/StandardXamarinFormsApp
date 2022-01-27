@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication.Resources.Values.MyValues">
+
+    <!--xmlns:converter="clr-namespace:GreenApp.Converters"-->
+
+    <!-- 
+    converters
+    =======================================-->
+    <!--<converter:ImgToCatPathConverter x:Key="imgToCatPathConverter"/>-->
+    <!-- end converters -->
+
+    <!-- 
+    colors
+    =======================================-->
+
+    <Color x:Key="primary">#1e377f</Color>
+    <Color x:Key="secondary">#f8f9fa</Color>
+
+    <Color x:Key="success">#28a745</Color>
+    <Color x:Key="info">#17a2b8</Color>
+    <Color x:Key="warning">#ffc107</Color>
+    <Color x:Key="danger">#dc3545</Color>
+    <Color x:Key="light">#f8f9fa</Color>
+    <Color x:Key="dark">#343a40</Color>
+
+
+    <Color x:Key="red">#dc3545</Color>
+    <Color x:Key="orange">#fd7e14</Color>
+    <Color x:Key="yellow">#ffc107</Color>
+    <Color x:Key="green">#28a745</Color>
+    <Color x:Key="blue">#007bff</Color>
+    <Color x:Key="white">#ffffff</Color>
+    <Color x:Key="gray">#6c757d</Color>
+    <Color x:Key="gray-dark">#343a40</Color>
+    <Color x:Key="indigo">#6610f2</Color>
+    <Color x:Key="purple">#6f42c1</Color>
+    <Color x:Key="pink">#e83e8c</Color>
+    <Color x:Key="teal">#20c997</Color>
+    <Color x:Key="cyan">#17a2b8</Color>
+    <!-- end colors -->
+
+
+    <!-- 
+    double 
+    =======================================-->
+    <x:Double x:Key="sm-font">10</x:Double>
+    <x:Double x:Key="md-font">12</x:Double>
+    <x:Double x:Key="lg-font">14</x:Double>
+
+    <!-- end double -->
+
+
+    <!-- 
+    styles 
+    =======================================-->
+    <!--set global bg to each page-->
+    <!--<Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundImageSource" Value="app_bg"/>
+    </Style>-->
+    
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="FONT-AR-LIGHT"/>
+    </Style>
+    <Style TargetType="Entry">
+        <Setter Property="FontFamily" Value="FONT-AR-LIGHT"/>
+    </Style>
+    <Style TargetType="Picker">
+        <Setter Property="FontFamily" Value="FONT-AR-LIGHT"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="FONT-AR-BOLD"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource primary}" />
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+    <!-- end styles -->
+
+
+
+
+    <!-- 
+    themes (dark/light) 
+    =======================================-->
+
+    <!-- end themes -->
+
+
+
+
+
+
+    <!-- 
+    app shell style) 
+    =======================================-->
+    <Style x:Key="BaseStyle" TargetType="Element">
+        <Setter Property="Shell.BackgroundColor" Value="{StaticResource primary}" />
+        <Setter Property="Shell.ForegroundColor" Value="White" />
+        <Setter Property="Shell.TitleColor" Value="White" />
+        <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+        <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource primary}" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+        <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+        <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+    </Style>
+    
+    <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+    
+    <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="White"></Setter>
+    </Style>
+    
+    <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                            <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource primary}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{StaticResource primary}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <!--Custom Style you can apply to any Flyout Item-->
+    
+    <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource primary}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <!-- end app shell style -->
+
+
+</ResourceDictionary>
